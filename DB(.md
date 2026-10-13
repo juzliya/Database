@@ -218,12 +218,6 @@ CREATE TABLE Security\_check (
 
 
 
-
-
-
-
-
-
 INSERT INTO Airline\_info (airline\_id, airline\_code, airline\_name, airline\_country, created\_at, updated\_at, info) VALUES
 
 (1, 'KC', 'Air Astana', 'Kazakhstan', '2024-03-12 11:24:00', '2024-03-12 11:24:00', 'National carrier'),
@@ -364,7 +358,11 @@ INSERT INTO Security\_check (security\_check\_id, check\_result, created\_at, up
 
 
 
-SELECT \* FROM Airline\_info;
+ШИБКА:  relation "airport" does not exist
+
+SQL state: 42P01
+
+Character: 658SELECT \* FROM Airline\_info;
 
 SELECT \* FROM Airport;
 
@@ -394,13 +392,9 @@ ALTER TABLE Flights MODIFY departing\_gate TEXT;
 
 ALTER TABLE Airline DROP COLUMN info;
 
-ALTER TABLE Flights 
+ALTER TABLE Flights
 
-&#x20;   ADD CONSTRAINT fk\_flights\_airline 
+&#x20;   ADD CONSTRAINT fk\_flights\_airline
 
 &#x20;   FOREIGN KEY (airline\_id) REFERENCES Airline(airline\_id);
-
-
-
-
 
