@@ -68,9 +68,9 @@ CREATE TABLE Passengers (
 
 
 
-
-
 CREATE TABLE Flights (
+
+
 
 &#x20;   flight\_id INT PRIMARY KEY,
 
@@ -96,7 +96,11 @@ CREATE TABLE Flights (
 
 &#x20;   updated\_at TIMESTAMP NOT NULL
 
+
+
 );
+
+
 
 
 
